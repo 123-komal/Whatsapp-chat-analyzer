@@ -50,7 +50,7 @@ def create_wordcloud(selected_user,df):
 
 
     # Specify the TrueType font path
-    font_path = r"C:\Users\komal\Downloads\shade-blue\Shade Blue.ttf"
+    font_path = r"Shade Blue.ttf"
     wc = WordCloud(width=500,height=500,min_font_size=10,background_color='black',font_path=font_path)
     temp['message'] = temp['message'].apply(remove_stop_words)
     df_wc = wc.generate(temp['message'].str.cat(sep=" "))
